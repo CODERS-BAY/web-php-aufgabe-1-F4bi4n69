@@ -23,8 +23,15 @@
                     }
                     if (isset($_POST['liter'])){
                         $liter = $_POST['liter'];
-                        $summe = $liter * $preis;
-                        echo "Kosten: $summe €";
+                        if ($liter >= 100) {
+                            $rabat = $liter * $preis;
+                            $rabat = $rabat * 0.02;
+                            $summe = ($liter * $preis) - $rabat;
+                        } else {
+                            $rabat = 0;
+                            $summe = $liter * $preis;
+                        }
+                        echo "Rabat: $rabat €</br>Kosten: $summe €";
                     }
                     ?>
                 </form>

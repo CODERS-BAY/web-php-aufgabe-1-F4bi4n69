@@ -8,8 +8,17 @@ div {
     max-width: 30%;
     margin-left: 35%;
     font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 input {
-    font-size: 15px;
+    font-size: 20px;
+    min-width: 150px;
+    min-height: 50px;
+    border-radius: 10px;
+}
+
+form {
+    padding-bottom: 10px;
 }

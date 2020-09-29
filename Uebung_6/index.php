@@ -8,22 +8,20 @@
         <section>
             <div>
                 <form action="index.php" method="POST"> 
-                    <label for="liter">Liter: </label></br>
+                <label for="liter">Liter: </label></br>
                     <input type="text" name="liter" value="1"></br>
-                    <label for="sorte">Sorte: </label></br>
-                    <input type="text" name="sorte" value="N = Normal │ S = Super"></br>
+                    <input type="radio" name="select" value="1.40" checked>
+                    <label for="super">Super</label></br>
+                    <input type="radio" name="select" value="1.35">
+                    <label for="benzin">Benzin</label></br>
+                    <input type="radio" name="select" value="1.10">
+                    <label for="diesel">Diesel</label></br>
                     <input type="submit"></br>
                     <?php
-                    if (isset($_POST['sorte'])) {
-                        if ($_POST['sorte'] == "N") {
-                            $preis = 1.40;
-                        } else {
-                            $preis = 1.50;
-                        }
-                    }
                     if (isset($_POST['liter'])){
                         $liter = $_POST['liter'];
-                        $summe = $liter * $preis;
+                        $select = $_POST['select'];
+                        $summe = $liter * $select;
                         echo "Kosten: $summe €";
                     }
                     ?>
