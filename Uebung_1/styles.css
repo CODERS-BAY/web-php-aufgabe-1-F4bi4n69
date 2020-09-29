@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    background-color: rgb(199, 199, 199);
+    padding-left: 37.5%;
+}
+
+.artikel {
+    background-color: rgb(168, 168, 168);
+    max-width: 30%;
+    font-size: 25px;
+}
+
+.summe {
+    background-color: green;
+    max-width: 30%;
+    font-size: 25px;
+}
